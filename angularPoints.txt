@@ -75,4 +75,38 @@ resolvejsonmodule : true
 
 
 14. below 3 are testing tool for performance testing in angular web.
- apdynamic , dynatrace or newrelic
+ apdynamic , dynatrace or newrelic, sentry.io
+
+15.  build and docker command
+
+below command is used to create build
+ng build --base-href /abcbankapp/
+
+below command will will create docker image
+"docker build -f Dockerfile -t abcbankapp ."
+
+now login to docker hum and push your image
+
+so apply below command
+
+"docker login"
+enter uername and password
+
+now
+"docker tag abcbankapp:latest dockerportoitry"
+dockerportoitry > we have to login in web hub.docker.com and create repository over there, that name we need to use there.
+now
+"docker push dockerportoitry"
+
+docker run --name boaapp -p 4201:4200 -d bankapp
+
+16. testing > jasmin
+
+there is karma..conf.js file > which is responsble to execute each spec file of your application.
+
+"ng test"
+
+
+17. 
+ng update @angular/cli @angular/core --allow-dirty --force
+
