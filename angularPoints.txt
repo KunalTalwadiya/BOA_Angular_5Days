@@ -1,0 +1,78 @@
+1. theme >
+angular.json > 
+
+style array >  "node_modules/primeng/resources/themes/lara-dark-blue/theme.css
+
+need to restart server and after this we can see this theme in our project (it will show black background)
+
+
+2. fi we declare any string without initialization, then compileser gives error that we need to initialize it, but we can ignore this errorif want.
+
+
+ checked:string; // compiler will throw error here
+
+for this we need to go tsconfig.json and then 
+compilerOptions > declare "strictPropertyInitialization": false,
+
+
+3. augury > this is devtool in browser which show us component hierarchy 
+
+4. what is shadow dom in agngular and dom tree and diffy algortthm
+
+5. standalone componenet > new feature in angular 14 => what is benefit of this
+     ng g c demat --standalone  => this command is used to create standalone comonent. 
+
+
+
+6.  angular 14 > @Optional injector => in constrctor 
+
+
+
+7. angular 14 > streamlined page title accessasiblity
+
+8. Rxjs :
+understand hot and ccccold observable
+subject is hot observable means => it do not depends on subsriberes, without subsriber it can do its emit and close 
+8.1
+ba.delete.componenet  > rxjs groupby example there, this is new introduced.
+8.2 
+rxjs zip
+rxjs zipwith and mergewith and difference between them and also check forkjoin
+
+8.3 topromise() is deprecated , so use firstValueFrom() and lastValueFrom()
+
+8.4 combilelatestwith
+
+8.5 race  => we call 2 rest api , if 1st api is not reachable then only 2 api will call and give result.
+            its kind of load balancing /fallback api callllllllllllllllllll we can say it.
+
+8.6 concatwith  =>  supose 2 array of observable are thee, we want them to combile their result one after, then we can use this.
+
+8.7 timer and timeout
+8.8 connect
+
+
+9. docker-comose up  => this command is fire from project root direcory, check what is use case
+
+10. angular form > form.status is introduced in 14 . field wise status can check like valid or invalid and form wise also we can check
+
+11. title > if you want to change titil as you change the route , then you can do this 2 ways
+
+> see example in app component
+
+11.1 angular 13 > from routing module > title key is introduced alowng with path, comonent 
+11.2 anulgar 14 > use title service to set title 
+
+12 image upload with memory leak example > check badirectdebit componenet
+
+
+13.  if we want to use json file directly in our ts file, then it will give error to us, so to fix ths issue, we need to modigy config.json file
+
+example : check this file in project > mockservice class 
+
+tsconfig.json > need to set this flasg
+resolvejsonmodule : true
+
+
+14. below 3 are testing tool for performance testing in angular web.
+ apdynamic , dynatrace or newrelic
